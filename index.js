@@ -8,8 +8,8 @@ var convar           = require('convar')
 
 
 function CeoLogger(meta, forceJson) {
-  var ceoLogger = this
-    , metaData      = meta
+  var ceoLogger     = this
+    , metaData      = meta              || null
     , config        = convar('ceo-logger') || {}
     , SysLog        = config.syslog     || convar('syslog')
     , LogEntries    = config.logentries || convar('logentries')
