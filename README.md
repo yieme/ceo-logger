@@ -8,19 +8,34 @@ npm i ceo-logger --save
 ```
 
 ## Basic Usage
-ÒÂÂ
-```basic.js``` example
+
+```basic.js``` example, defaults to console
+
 
 ```js
 var log = new require('ceo-logger')();
-log.info('It Logs') // defaults to console
+log.info('OK') // info: OK
+```
+
+## Pass Meta Data
+
+```js
+var log = new require('ceo-logger')({ some:"metadata" });
+log.info('OK') // info: OK some=metadata
+```
+
+## Output Json Data
+
+```js
+var log = new require('ceo-logger')({ some:"metadata" }, true);
+log.info(logging) // { "some": "metadata", "level": "info", "message": "OK" }
 ```
 
 ## CLI Usage
 
 ```sh
 node basic.js --logentries LogEntriesKey
-# 'It Logs' goes to LogEntries
+# logging goes to LogEntries
 ```
 
 or via environment variable
@@ -29,7 +44,7 @@ or via environment variable
 logentries=LogEntriesKey
 
 node basic.js
-# 'It Logs' goes to LogEntries
+# logging goes to LogEntries
 ```
 
 ## Send to multiple places
@@ -40,21 +55,21 @@ loggly=LogglyKey
 mongo=MongoConnectString
 
 node basic.js
-# 'It Logs' goes to LogEntries, Loggly and MongoDb
+# logging goes to LogEntries, Loggly and MongoDb
 ```
 
 or config as JSON
 
 ```sh
 node basic.js --ceo-logger '{"logentries":"key", "loggly":"key", "mongo":"connectionString"}'
-# 'It Logs' goes to LogEntries, Loggly and MongoDb
+# logging goes to LogEntries, Loggly and MongoDb
 ```
 
 or config as JSONIC
 
 ```sh
 node basic.js --ceo-logger 'logentries:key,loggly:key'
-# 'It Logs' goes to LogEntries and Loggly
+# logging goes to LogEntries and Loggly
 ```
 
 ## Log Functions and Alias
