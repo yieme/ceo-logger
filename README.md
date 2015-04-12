@@ -12,7 +12,7 @@ npm i ceo-logger --save
 ```basic.js``` example
 
 ```js
-var log = require('ceo-logger');
+var log = new require('ceo-logger')();
 log.info('It Logs') // defaults to console
 ```
 
