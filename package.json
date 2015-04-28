@@ -1,6 +1,6 @@
 {
   "name": "ceo-logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Auto configuring Winston logger supporting logentries, loggly, mongo, riak, simpledb, syslog and defaulting to console",
   "main": "index.js",
   "scripts": {
