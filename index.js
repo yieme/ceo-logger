@@ -55,7 +55,7 @@ function CeoLogger(meta, forceJson) {
   ceoLogger.info    = function(message) { winston.info(message,    metaData) }
   ceoLogger.notice  = function(message) { winston.notice(message,  metaData) }
   ceoLogger.warning = function(message) { winston.warning(message, metaData) }
-  ceoLogger.err     = function(message) { winston.err(message,     metaData) }
+  ceoLogger.err     = function(message) { winston.error(message,   metaData) }
   ceoLogger.crit    = function(message) { winston.crit(message,    metaData) }
   ceoLogger.alert   = function(message) { winston.alert(message,   metaData) }
   ceoLogger.emerg   = function(message) { winston.emerg(message,   metaData) }
@@ -63,7 +63,7 @@ function CeoLogger(meta, forceJson) {
   // matching aliases
   ceoLogger.information = function(message) { winston.info(message,    metaData) } // informational message
   ceoLogger.warn        = function(message) { winston.warning(message, metaData) } // warning conditions
-  ceoLogger.error       = function(message) { winston.err(message,     metaData) } // error conditions
+  ceoLogger.error       = function(message) { winston.error(message,   metaData) } // error conditions
   ceoLogger.critical    = function(message) { winston.crit(message,    metaData) } // critical conditions
   ceoLogger.emergency   = function(message) { winston.emerg(message,   metaData) } // system is unusable
 
