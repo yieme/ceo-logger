@@ -1,6 +1,6 @@
 {
   "name": "ceo-logger",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Auto configuring Winston logger supporting logentries, loggly, mongo, riak, simpledb, syslog and defaulting to console",
   "main": "index.js",
   "scripts": {
@@ -10,12 +10,12 @@
   "license": "MIT",
   "dependencies": {
     "convar": "^1.1.6",
-    "winston": "^0.8.3",
+    "winston": "^1.0.0",
     "winston-logentries-transport": "0.0.1",
-    "winston-loggly": "^1.0.2",
-    "winston-mongodb": "^0.5.3",
+    "winston-loggly": "^1.1.0",
+    "winston-mongodb": "^1.1.1",
     "winston-riak": "^0.3.2",
     "winston-simpledb": "^0.1.2",
-    "winston-syslog": "^1.0.0"
+    "winston-syslog": "^1.1.0"
   }
 }
