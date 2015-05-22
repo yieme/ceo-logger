@@ -7,7 +7,7 @@ var convar           = require('convar')
 
 
 
-function CeoLogger(meta, forceJson) {
+function CeoLogger(meta, forceJson, logLevel) {
   var ceoLogger     = this
     , metaData      = meta              || null
     , config        = convar('ceo-logger') || {}
@@ -50,6 +50,7 @@ function CeoLogger(meta, forceJson) {
   })
 
   winston.setLevels(logLevels)
+  if (logLevel) winston.level = logLevel
 
   ceoLogger.debug   = function(message) { winston.debug(message,   metaData) }
   ceoLogger.info    = function(message) { winston.info(message,    metaData) }

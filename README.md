@@ -31,6 +31,14 @@ var log = new require('ceo-logger')({ some:"metadata" }, true);
 log.info(logging) // { "some": "metadata", "level": "info", "message": "OK" }
 ```
 
+## Set Logging Level
+
+```js
+var log = new require('ceo-logger')({ some:"metadata" }, true, 'debug'); // default is 'info'
+log.debug(logging) // { "some": "metadata", "level": "info", "message": "OK" }
+```
+
+
 ## CLI Usage
 
 ```sh
